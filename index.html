@@ -1,0 +1,79 @@
+<!DOCTYPE html lang='en'>
+<head>
+    <meta utf="utf-8">
+    <title>CRUD project</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+
+    <div class="head">
+        <h2>CRUD Project By <a href="https://www.facebook.com/0100000000T/" target="_blank" style="text-decoration: none;">Tegar</a></h2>
+        <p>Product Management System</p>
+    </div>
+
+
+    <div class="inputs" >
+        <input type="text" autocomplete="off" placeholder="Title" id="title">
+        <div class="priceButtons">
+            <input min="0" autocomplete="off" type="number" id="price" onkeyup="getTotal()" placeholder="Price">
+            <input min="0" autocomplete="off" type="number" id="taxes" onkeyup="getTotal()" placeholder="Taxes">
+            <input min="0" autocomplete="off" type="number" id="ads" onkeyup="getTotal()" placeholder="Ads">
+            <input min="0" autocomplete="off" type="number" id="discount" onkeyup="getTotal()" placeholder="Discount">
+            <small id="total"></small>
+        </div>
+        <input min="1" autocomplete="off" type="number" id="count" placeholder="Count" max="501">
+        <input autocomplete="off" type="text" id="category" placeholder="Category" >
+        <button id="submit" >Create</button>
+    </div>
+
+
+    <div class="output">
+        <input type="text" placeholder="Search" class="search">
+        <div class="search2types">
+            <button id="searchTitle">Search By Title</button>
+            <button id="searchCategory">Search By Category</button>
+        </div>
+        <div><button id="deleteAll"></button></div>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!--
+                <tr>
+                    <th>0</th>
+                    <th>oppo reno 6</th>
+                    <th>11,200</th>
+                    <th>500</th>
+                    <th>40</th>
+                    <th>50</th>
+                    <th>11100</th>
+                    <th>Phone</th>
+                    <th><button>Update</button></th>
+                    <th><button>delete</button></th>
+                </tr>
+                -->
+            </tbody>
+        </table>
+        
+        
+    </div>
+    
+
+
+    <script src="action.js"></script>
+</body>
